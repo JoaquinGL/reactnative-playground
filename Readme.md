@@ -16,7 +16,7 @@ Then to test the app, write:
 
 ---
 
-##Start from scratch 
+## Start from scratch 
 
 You will need Node, Watchman, the React Native command line interface, and Xcode.
 
