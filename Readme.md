@@ -4,6 +4,20 @@
 
 ### Installing Dependencies
 
+Download the project, then write in the terminal:
+
+> npm install
+
+Then to test the app, write:
+
+>cd playground
+>
+>react-native run-ios
+
+---
+
+##Start from scratch 
+
 You will need Node, Watchman, the React Native command line interface, and Xcode.
 
 #### Node, Watchman
