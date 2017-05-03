@@ -17,7 +17,7 @@ import Welcome from './src/assets/_includes/components/welcome/welcome';
 
 const App = () => (
   <View style={styles.container}>
-    <Header />
+    <Header headerText={'Playground!'}/>
     <Welcome />
   </View>
 );

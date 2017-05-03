@@ -3,12 +3,12 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 // Make a component
-const Header = () => {
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Play ground!</Text>
+      <Text style={textStyle}>{props.headerText}</Text>
     </View>
   );
 };
@@ -18,15 +18,22 @@ const styles = {
 
   textStyle: {
     fontSize: 20,
-    textAlign: 'center',
   },
 
   viewStyle: {
-    padding: 20,
-    marginTop: 20,
-    borderWidth: 1,
-    borderColor: '#000',
+    height: 60,
+    paddingTop: 15,
+
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: .2,
+
+    elevation: 2,
+    position: 'relative',
+
     backgroundColor: '#F8F8F8',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 };
 

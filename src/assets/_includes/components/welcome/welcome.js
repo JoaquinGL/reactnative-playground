@@ -4,10 +4,10 @@ import { Text, View } from 'react-native';
 
 // Make a component
 const Welcome = () => {
-  const { welcome, instructions } = styles;
+  const { welcome, instructions, container} = styles;
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.welcome}> Welcome </Text>
       <Text style={styles.instructions}>
         Press Cmd+R to reload,{'\n'}
@@ -24,13 +24,16 @@ const Welcome = () => {
 const styles = {
   welcome: {
     fontSize: 20,
-    textAlign: 'center',
     margin: 10,
   },
   instructions: {
-    textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+    textAlign: 'center',
+  },
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 };
 
