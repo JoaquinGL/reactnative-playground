@@ -1,7 +1,8 @@
 // Import libraries for making a component
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import AlbumDetail from '../albumdetail/albumdetail';
 
 // Make a component
 class Albumlist extends Component {
@@ -15,10 +16,9 @@ class Albumlist extends Component {
   }
 
   // helper method
-
   renderAlbums() {
     return this.state.albums.map(album =>
-      <Text key={album.title}>{album.title}</Text> // key must to be unique
+      <AlbumDetail key={album.title} album={album} /> // the prop name don't have to be the same the name of the variable
     );
   }
 
