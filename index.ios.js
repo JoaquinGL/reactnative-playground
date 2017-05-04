@@ -24,7 +24,7 @@ const App = () => (
     <View>
       <Welcome />
     </View>
-    <View>
+    <View style={{ flex: 1}}>
       <Albumlist />
     </View>
   </View>
