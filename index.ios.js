@@ -14,11 +14,19 @@ import {
 
 import Header from './src/assets/_includes/components/header/header';
 import Welcome from './src/assets/_includes/components/welcome/welcome';
+import Albumlist from './src/assets/_includes/components/albumlist/albumlist';
 
 const App = () => (
   <View style={styles.container}>
-    <Header headerText={'Playground!'}/>
-    <Welcome />
+    <View>
+      <Header headerText={'Playground!'} />
+    </View>
+    <View>
+      <Welcome />
+    </View>
+    <View>
+      <Albumlist />
+    </View>
   </View>
 );
 
