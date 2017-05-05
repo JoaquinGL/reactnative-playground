@@ -3,14 +3,14 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 // Make a component
-const Button = () => {
+const Button = ({ onPress, children }) => {
 
   const { buttonStyle, textStyle } = styles;
 
   return(
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text  style={textStyle}>
-        Buy this album
+        {children}
       </Text>
     </TouchableOpacity>
   );
@@ -38,8 +38,6 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 10
   }
-
-
 
 };
 
