@@ -1,6 +1,6 @@
 // Import libraries for making a component
 import React from 'react';
-import { Text, View, Image} from 'react-native';
+import { Text, View, Image, Linking} from 'react-native';
 import Card from '../card/card';
 import CardSection from '../cardsection/cardsection';
 import Button from '../button/button';
@@ -12,7 +12,8 @@ const AlbumDetail = ({ album }) => {
     title,
     artist,
     thumbnail_image,
-    image
+    image,
+    url
   } = album;
 
   const {
@@ -45,12 +46,17 @@ const AlbumDetail = ({ album }) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button onPress={() => Linking.openURL(url) }>
+          Buy this album
+        </Button>
       </CardSection>
 
     </Card>
   );
 };
+
+// The onPress prop is not the same as TouchableOpacity onPress prop
+
 
 const styles = {
   headerContenStyle: {
