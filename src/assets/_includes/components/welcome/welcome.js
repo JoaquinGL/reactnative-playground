@@ -4,17 +4,16 @@ import { Text, View } from 'react-native';
 
 // Make a component
 const Welcome = () => {
-  const { welcome, instructions, container} = styles;
+  const { welcome, instructions, container, subtitle} = styles;
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}> Welcome </Text>
-      <Text style={styles.instructions}>
-        Press Cmd+R to reload,{'\n'}
-        Cmd+D or shake for dev menu
+    <View style={container}>
+      <Text style={welcome}> Trending in open source </Text>
+      <Text style={subtitle}>
+        See what the GitHub community is most excited about today.
       </Text>
-      <Text style={styles.instructions}>
-        To get started, edit index.ios.js
+       <Text style={instructions}>
+        Cmd+D or shake for dev menu
       </Text>
     </View>
   );
@@ -26,10 +25,17 @@ const styles = {
     fontSize: 20,
     margin: 10,
   },
+  subtitle: {
+    color: '#333333',
+    marginBottom: 5,
+    textAlign: 'center',
+    fontSize: 12,
+  },
   instructions: {
     color: '#333333',
     marginBottom: 5,
     textAlign: 'center',
+    fontSize: 12,
   },
   container: {
     justifyContent: 'center',

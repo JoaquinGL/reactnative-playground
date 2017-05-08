@@ -10,7 +10,7 @@ const AlbumDetail = ({ album }) => {
 
   const {
     title,
-    artist,
+    description,
     thumbnail_image,
     image,
     url
@@ -21,7 +21,8 @@ const AlbumDetail = ({ album }) => {
     headerContenStyle,
     thumbnailContainerStyle,
     headerTextStyle,
-    imageStyle
+    imageStyle,
+    descriptionTextStyle,
   } = styles;
 
   return(
@@ -35,7 +36,7 @@ const AlbumDetail = ({ album }) => {
         </View>
         <View style={headerContenStyle}>
           <Text style={headerTextStyle}>{title}</Text>
-          <Text>{artist}</Text>
+          <Text style={descriptionTextStyle}>{description}</Text>
         </View>
       </CardSection>
 
@@ -47,7 +48,7 @@ const AlbumDetail = ({ album }) => {
 
       <CardSection>
         <Button onPress={() => Linking.openURL(url) }>
-          Buy this album
+          View in github
         </Button>
       </CardSection>
 
@@ -65,7 +66,16 @@ const styles = {
   },
 
   headerTextStyle: {
-    fontSize: 18,
+    fontSize: 16,
+    maxWidth: 200,
+    paddingBottom: 5
+  },
+
+  descriptionTextStyle: {
+    fontSize: 12,
+    maxWidth: 220,
+    paddingBottom: 5,
+    color: '#555',
   },
 
   thumbnailStyle: {
@@ -81,7 +91,7 @@ const styles = {
   },
 
   imageStyle: {
-    height: 300,
+    height: 150,
     flex: 1,
     width: null
   },
