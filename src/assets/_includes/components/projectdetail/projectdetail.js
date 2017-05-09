@@ -6,7 +6,7 @@ import CardSection from '../cardsection/cardsection';
 import Button from '../button/button';
 
 // Make a component
-const AlbumDetail = ({ album }) => {
+const ProjectDetail = ({ project }) => {
 
   const {
     title,
@@ -14,7 +14,7 @@ const AlbumDetail = ({ album }) => {
     thumbnail_image,
     image,
     url
-  } = album;
+  } = project;
 
   const {
     thumbnailStyle,
@@ -98,7 +98,7 @@ const styles = {
 };
 
 // Make the component available to other parts of the app
-export default AlbumDetail;
+export default ProjectDetail;
 
 
 // (props) -> ( { album} ) -> when you have multiple references to props object

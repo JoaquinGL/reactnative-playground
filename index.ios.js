@@ -14,7 +14,7 @@ import {
 
 import Header from './src/assets/_includes/components/header/header';
 import Welcome from './src/assets/_includes/components/welcome/welcome';
-import Albumlist from './src/assets/_includes/components/albumlist/albumlist';
+import ProjectList from './src/assets/_includes/components/projectlist/projectlist';
 
 const App = () => (
   <View style={styles.container}>
@@ -25,7 +25,7 @@ const App = () => (
       <Welcome />
     </View>
     <View style={{ flex: 1}}>
-      <Albumlist />
+      <ProjectList />
     </View>
   </View>
 );
